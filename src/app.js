@@ -1,3 +1,4 @@
+const PORT=process.env.PORT||3000
 const hbs = require('hbs')
 const path = require('path')
 const express = require('express')
@@ -77,7 +78,7 @@ app.get('/weather', (req, res) => {
 
 app.use('*', express.static(path.join(publicDirectoryPath, './404.html')))
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('Server started at port 3000')
 })
 
